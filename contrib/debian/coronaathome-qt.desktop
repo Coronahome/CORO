@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CORONAatHOME
+Comment=CORONAatHOME P2P Cryptocurrency
+Comment[fr]=CORONAatHOME, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CORONAatHOME, eşten eşe kriptografik sanal para birimi
+Exec=coronaathome-qt %u
+Terminal=false
+Type=Application
+Icon=coronaathome128
+MimeType=x-scheme-handler/coronaathome;
+Categories=Office;Finance;

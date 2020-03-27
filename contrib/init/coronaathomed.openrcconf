@@ -1,0 +1,26 @@
+# /etc/conf.d/coronaathomed: config file for /etc/init.d/coronaathomed
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/coronaathome/coronaathome.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/coronaathomed"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/coronaathomed.pid"
+
+# Where to write coronaathomed data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/coronaathomed"
+
+# User and group to own coronaathomed process
+#BITCOIND_USER="coronaathome"
+#BITCOIND_GROUP="coronaathome"
+
+# Path to coronaathomed executable
+#BITCOIND_BIN="/usr/bin/coronaathomed"
+
+# Nice value to run coronaathomed under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

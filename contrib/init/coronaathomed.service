@@ -1,0 +1,26 @@
+[Unit]
+Description=CORONAatHOME's distributed currency daemon
+After=network.target
+
+[Service]
+User=coronaathome
+Group=coronaathome
+
+Type=forking
+PIDFile=/var/lib/coronaathomed/coronaathomed.pid
+
+ExecStart=/usr/bin/coronaathomed -daemon -pid=/var/lib/coronaathomed/coronaathomed.pid \
+          -conf=/etc/coronaathome/coronaathome.conf -datadir=/var/lib/coronaathomed
+
+ExecStop=-/usr/bin/coronaathome-cli -conf=/etc/coronaathome/coronaathome.conf \
+         -datadir=/var/lib/coronaathomed stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
